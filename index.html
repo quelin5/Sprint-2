@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS. Version v4.6-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
+    <!--Mi CSS-->
+    <link href="styles.css" rel="stylesheet">
+
+    <title>Sprint 2. Bootstrap.</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">
+            <img src="logoo.png" width="30" height="30" alt=""> Quelin
+        </a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Inicio<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Ingresar</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Registrarse</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <div class="modal-dialog modal-dialog-centered text-center">
+        <div class="col-sm-8 main-section">
+            <div class="modal-content">
+                <div class="col-12 user-img">
+                    <img src="userr.svg" height="150wv">
+                </div>
+                <form class="col-12" th:action="@{/login}" method="get">
+                    <div class="form-group" id="user-group">
+                        <input type="text" class="form-control" placeholder="Nombre de usuario" name="username"/>
+                    </div>
+                    <div class="form-group" id="contrasena-group">
+                        <input type="password" class="form-control" placeholder="Contraseña" name="password"/>
+                    </div>
+                    <button type="submit" class="btn btn-light"><i class="fas fa-sign-in-alt"></i>  Entrar </button>
+                </form>
+                <div class="col-12 forgot">
+                    <a href="#">Recordar contraseña</a>
+                </div>
+                <div th:if="${param.error}" class="alert alert-danger" role="alert">
+		            Contraseña incorrecta.
+		        </div>
+		        <div th:if="${param.logout}" class="alert alert-success" role="alert">
+		            Ha finalizado la sesión.
+		        </div>
+            </div>
+        </div>
+    </div>
+    </nav>
+  </body>
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+</html>
+
