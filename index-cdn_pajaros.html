@@ -10,7 +10,8 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
     integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
   <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
-
+  <!--CSS PERSONALIZAR-->
+  <link rel="stylesheet" href="dist/css/bootstrap.css">
 
 </head>
 
@@ -22,10 +23,13 @@
       <a class="navbar-brand" href="#">
         <img src="images/planta.png" width="30" height="30" class="d-inline-block align-top" alt=""> Quelin5
       </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+
+      <!--BOTON BURGER-->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
         aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
+
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav">
           <li class="nav-item">
@@ -39,7 +43,7 @@
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
-              data-bs-toggle="dropdown" aria-expanded="false">
+              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Por temas...
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
@@ -53,7 +57,7 @@
 
 
       <!--BOTON ENTRAR CUENTA -->
-      <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal">
+      <button type="button" class="btn btn-success mr-2" data-toggle="modal" data-target="#exampleModal">
         Entrar
       </button>
 
@@ -91,12 +95,12 @@
           </div>
         </div>
       </div>
-    </div>
-    <div>
+    
+    
       <!--BOTON REGISTRO-->
-      <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal2">
-        Registrarse
-      </button>
+        <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal2">
+          Registrarse
+        </button>      
 
       <!--VENTANA MODAL REGISTRO-->
       <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
